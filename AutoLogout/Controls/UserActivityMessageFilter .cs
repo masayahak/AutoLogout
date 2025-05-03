@@ -1,7 +1,4 @@
-﻿using System.Windows.Forms;
-using System.Diagnostics;
-
-namespace AutoLogout.Controls
+﻿namespace AutoLogout.Controls
 {
 
     // ユーザーの操作を監視するフィルタ

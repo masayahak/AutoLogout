@@ -34,7 +34,7 @@ namespace AutoLogout.Controls
         {
             base.OnActivated(e);
             // フォームがフォーカスを取得したら、未操作タイマーをリセット
-            UserActivityTracker.Update(); 
+            UserActivityTracker.Update();
         }
 
         private void StartInactivityTimer()
@@ -46,11 +46,11 @@ namespace AutoLogout.Controls
 
         private void CheckTimeout()
         {
-            if (!UserActivityTracker.IsInactive(Timeout)) 
+            if (!UserActivityTracker.IsInactive(Timeout))
                 return;
 
             _inactivityTimer.Stop();
-            if (!IsHandleCreated) 
+            if (!IsHandleCreated)
                 return;
 
             BeginInvoke(() =>

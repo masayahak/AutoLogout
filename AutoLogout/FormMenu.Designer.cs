@@ -31,6 +31,7 @@
             Button業務１ = new Button();
             Button業務２ = new Button();
             Button終了 = new Button();
+            Labelログイン者 = new Label();
             SuspendLayout();
             // 
             // Button業務１
@@ -62,18 +63,29 @@
             Button終了.UseVisualStyleBackColor = true;
             Button終了.Click += Button終了_Click;
             // 
+            // Labelログイン者
+            // 
+            Labelログイン者.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Labelログイン者.Location = new Point(437, 9);
+            Labelログイン者.Name = "Labelログイン者";
+            Labelログイン者.Size = new Size(359, 19);
+            Labelログイン者.TabIndex = 7;
+            Labelログイン者.Text = "ログイン者";
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumAquamarine;
             ClientSize = new Size(800, 450);
+            Controls.Add(Labelログイン者);
             Controls.Add(Button終了);
             Controls.Add(Button業務２);
             Controls.Add(Button業務１);
             Name = "FormMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormMenu";
+            Load += FormMenu_Load;
             ResumeLayout(false);
         }
 
@@ -82,5 +94,6 @@
         private Button Button業務１;
         private Button Button業務２;
         private Button Button終了;
+        private Label Labelログイン者;
     }
 }

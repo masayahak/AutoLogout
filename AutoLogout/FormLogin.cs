@@ -27,14 +27,6 @@ namespace AutoLogout
                 return;
             }
 
-            // ログイン成功
-            CurrentUser.ユーザーID = userId;
-            CurrentUser.権限コード = 権限コード!;
-            CurrentUser.ログイン日時 = DateTime.Now;
-            CurrentUser.IPアドレス = Dns.GetHostAddresses(Dns.GetHostName())
-                                        .FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)?
-                                        .ToString() ?? "不明";
-
             // 画面遷移
             var formMenu = new FormMenu();
             formMenu.FormClosed += (_, _) => this.Close();

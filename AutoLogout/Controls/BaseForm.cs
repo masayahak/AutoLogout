@@ -1,4 +1,5 @@
-﻿using Timer = System.Windows.Forms.Timer;
+﻿using System.ComponentModel;
+using Timer = System.Windows.Forms.Timer;
 
 namespace AutoLogout.Controls
 {
@@ -55,6 +56,10 @@ namespace AutoLogout.Controls
 
         private void CheckTimeout()
         {
+            // フォームがデザインモードまたはライセンスモードの場合は、タイマーを停止
+            if (!this.IsHandleCreated || this.DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
             if (!UserActivityTracker.IsInactive(Timeout))
                 return;
 

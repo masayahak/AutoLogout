@@ -30,11 +30,13 @@ namespace AutoLogout
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            TextBoxユーザーID = new TextBox();
+            TextBoxパスワード = new TextBox();
             label2 = new Label();
             Buttonログイン = new Button();
             Button終了 = new Button();
+            label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -46,19 +48,20 @@ namespace AutoLogout
             label1.TabIndex = 0;
             label1.Text = "ユーザー";
             // 
-            // textBox1
+            // TextBoxユーザーID
             // 
-            textBox1.Location = new Point(94, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(138, 23);
-            textBox1.TabIndex = 1;
+            TextBoxユーザーID.Location = new Point(94, 20);
+            TextBoxユーザーID.Name = "TextBoxユーザーID";
+            TextBoxユーザーID.Size = new Size(138, 23);
+            TextBoxユーザーID.TabIndex = 1;
             // 
-            // textBox2
+            // TextBoxパスワード
             // 
-            textBox2.Location = new Point(94, 61);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(138, 23);
-            textBox2.TabIndex = 3;
+            TextBoxパスワード.Location = new Point(94, 61);
+            TextBoxパスワード.Name = "TextBoxパスワード";
+            TextBoxパスワード.PasswordChar = '*';
+            TextBoxパスワード.Size = new Size(138, 23);
+            TextBoxパスワード.TabIndex = 3;
             // 
             // label2
             // 
@@ -71,7 +74,7 @@ namespace AutoLogout
             // 
             // Buttonログイン
             // 
-            Buttonログイン.Location = new Point(21, 120);
+            Buttonログイン.Location = new Point(85, 188);
             Buttonログイン.Name = "Buttonログイン";
             Buttonログイン.Size = new Size(75, 23);
             Buttonログイン.TabIndex = 4;
@@ -81,7 +84,7 @@ namespace AutoLogout
             // 
             // Button終了
             // 
-            Button終了.Location = new Point(157, 120);
+            Button終了.Location = new Point(221, 188);
             Button終了.Name = "Button終了";
             Button終了.Size = new Size(75, 23);
             Button終了.TabIndex = 5;
@@ -89,16 +92,36 @@ namespace AutoLogout
             Button終了.UseVisualStyleBackColor = true;
             Button終了.Click += Button終了_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(94, 114);
+            label3.Name = "label3";
+            label3.Size = new Size(95, 15);
+            label3.TabIndex = 6;
+            label3.Text = "admin/password";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(94, 145);
+            label4.Name = "label4";
+            label4.Size = new Size(53, 15);
+            label4.TabIndex = 7;
+            label4.Text = "user/test";
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(251, 160);
+            ClientSize = new Size(335, 227);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(Button終了);
             Controls.Add(Buttonログイン);
-            Controls.Add(textBox2);
+            Controls.Add(TextBoxパスワード);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(TextBoxユーザーID);
             Controls.Add(label1);
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
@@ -109,10 +132,12 @@ namespace AutoLogout
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox TextBoxユーザーID;
+        private TextBox TextBoxパスワード;
         private Label label2;
         private Button Buttonログイン;
         private Button Button終了;
+        private Label label3;
+        private Label label4;
     }
 }

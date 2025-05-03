@@ -2,8 +2,17 @@
 
 namespace AutoLogout.Controls
 {
-    public class BaseForm : Form
+    public partial class BaseForm : Form
     {
+        public BaseForm()
+        {
+            InitializeComponent();
+        }
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
+        }
 
         // 自動ログアウトまでの時間（分）
         private readonly TimeSpan Timeout =
@@ -58,5 +67,6 @@ namespace AutoLogout.Controls
                 Program.AppContextInstance!.ShowLoginAndCloseOthers();
             });
         }
+
     }
 }

@@ -19,5 +19,9 @@ namespace AutoLogout
             this.Hide();
         }
 
+        private void ButtonèIóπ_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

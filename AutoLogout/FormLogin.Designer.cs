@@ -77,7 +77,7 @@ namespace AutoLogout
             Buttonログイン.TabIndex = 4;
             Buttonログイン.Text = "ログイン";
             Buttonログイン.UseVisualStyleBackColor = true;
-            Buttonログイン.Click += this.Buttonログイン_Click;
+            Buttonログイン.Click += Buttonログイン_Click;
             // 
             // Button終了
             // 
@@ -87,6 +87,7 @@ namespace AutoLogout
             Button終了.TabIndex = 5;
             Button終了.Text = "終了";
             Button終了.UseVisualStyleBackColor = true;
+            Button終了.Click += Button終了_Click;
             // 
             // FormLogin
             // 

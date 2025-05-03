@@ -1,7 +1,5 @@
 using AutoLogout.Controls;
 using AutoLogout.Login;
-using System;
-using System.Net;
 
 namespace AutoLogout
 {

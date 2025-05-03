@@ -13,7 +13,7 @@ namespace AutoLogout.Login
 
         public bool TryLogin(string userId, string password, out string? 権限コード)
         {
-            if (!_repository.TryLogin(userId, password, out 権限コード)) 
+            if (!_repository.TryLogin(userId, password, out 権限コード))
                 return false;
 
             // ログイン成功
@@ -26,5 +26,6 @@ namespace AutoLogout.Login
 
             return true;
         }
+
     }
 }

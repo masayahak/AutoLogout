@@ -1,4 +1,6 @@
-﻿namespace AutoLogout.Controls
+﻿using AutoLogout.Login;
+
+namespace AutoLogout.Controls
 {
     public class MyAppContext : ApplicationContext
     {
@@ -10,6 +12,9 @@
         // 新しいログインフォームを表示し、他のフォームを全て閉じる
         public void ShowLoginAndCloseOthers()
         {
+            // ログアウト
+            CurrentUser.Logout();
+
             // ログインフォームは常にNEWする
             var loginForm = new FormLogin();
             loginForm.Show();

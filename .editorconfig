@@ -1,7 +1,10 @@
 ﻿[*.{cs,vb}]
 
-# IDE0028: コレクションの初期化を簡略化します
+# 問題の抑制
 dotnet_diagnostic.IDE0028.severity = none
+dotnet_diagnostic.IDE0290.severity = none
+dotnet_diagnostic.CA1822.severity = none
+
 dotnet_style_qualification_for_field = false:silent
 dotnet_style_qualification_for_property = false:silent
 dotnet_style_qualification_for_method = false:silent

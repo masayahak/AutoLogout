@@ -7,6 +7,7 @@
             loginForm.Show();
         }
 
+        // 新しいログインフォームを表示し、他のフォームを全て閉じる
         public void ShowLoginAndCloseOthers()
         {
             // ログインフォームは常にNEWする
@@ -15,7 +16,7 @@
 
             foreach (Form f in Application.OpenForms.Cast<Form>().ToList())
             {
-                // 過去のログインフォームがあっても、NEWしたインスタンス以外は閉じる
+                // 過去のログインフォームが残っていても、NEWしたインスタンス以外は閉じる
                 if (f != loginForm)
                     f.Close();
             }

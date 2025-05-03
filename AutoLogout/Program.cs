@@ -12,6 +12,9 @@ namespace AutoLogout
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // ユーザーアクティビティを監視するフィルタを追加
+            Application.AddMessageFilter(new UserActivityMessageFilter());
+
             var loginForm = new FormLogin();
             AppContextInstance = new MyAppContext(loginForm);
             Application.Run(AppContextInstance);
